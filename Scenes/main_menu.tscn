@@ -11,10 +11,10 @@
 default_font = SubResource("SystemFont_q8xqj")
 default_font_size = 36
 
-[sub_resource type="SystemFont" id="SystemFont_1cqif"]
+[sub_resource type="SystemFont" id="SystemFont_1y80p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_avxhw"]
-font = SubResource("SystemFont_1cqif")
+font = SubResource("SystemFont_1y80p")
 font_size = 96
 font_color = Color(0.890196, 0.235294, 0.360784, 1)
 shadow_size = 5

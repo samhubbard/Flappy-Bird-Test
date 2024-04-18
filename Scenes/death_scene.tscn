@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch6rilfcbrl6k"]
+
+[ext_resource type="Script" path="res://Scripts/Game/death_scene.gd" id="1_0xct5"]
+
+[sub_resource type="SystemFont" id="SystemFont_1cqif"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ngxs3"]
+font = SubResource("SystemFont_1cqif")
+font_size = 96
+font_color = Color(0.890196, 0.235294, 0.360784, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[node name="Death Scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xct5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.574
+offset_right = -2.0
+offset_bottom = -0.100006
+text = "You Died..."
+label_settings = SubResource("LabelSettings_ngxs3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.391
+anchor_top = 0.608
+anchor_right = 0.576
+anchor_bottom = 0.739
+offset_left = 0.567963
+offset_top = 0.0159607
+offset_right = 0.447937
+offset_bottom = 0.127991
+text = "Damn"
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

@@ -1,6 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbi1pxdwip2e8"]
+[gd_scene load_steps=11 format=3 uid="uid://bbi1pxdwip2e8"]
 
 [ext_resource type="PackedScene" uid="uid://7wum3ydu15ki" path="res://Scenes/player.tscn" id="1_fj5dt"]
+[ext_resource type="Script" path="res://scripts/Game/world.gd" id="1_p51sq"]
+[ext_resource type="PackedScene" uid="uid://ch6rilfcbrl6k" path="res://Scenes/death_scene.tscn" id="2_vfyhl"]
 [ext_resource type="Script" path="res://Scripts/Game/Spawner.gd" id="2_xv00x"]
 [ext_resource type="PackedScene" uid="uid://d0xibltk3equo" path="res://Scenes/blockers.tscn" id="3_7435x"]
 [ext_resource type="Script" path="res://Scripts/Game/Score.gd" id="4_867ns"]
@@ -20,6 +22,8 @@ shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(4, 4)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_p51sq")
+death_scene = ExtResource("2_vfyhl")
 
 [node name="Player" parent="." instance=ExtResource("1_fj5dt")]
 z_index = 1
