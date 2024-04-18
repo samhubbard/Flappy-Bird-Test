@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwvfis6b30ncr"]
+
+[ext_resource type="Script" path="res://Scripts/Game/parallax_background.gd" id="1_7eubi"]
+[ext_resource type="Texture2D" uid="uid://ky7harab586c" path="res://Art/Sprites/Background/BackgroundLayer1.png" id="2_f7nxc"]
+[ext_resource type="Texture2D" uid="uid://bwwmp540dmwb5" path="res://Art/Sprites/Background/BackgroundLayer2.png" id="3_yy28a"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_7eubi")
+
+[node name="Scenery" type="ParallaxLayer" parent="."]
+z_index = -2
+motion_scale = Vector2(2.5, 2.5)
+motion_mirroring = Vector2(1149, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Scenery"]
+z_index = -3
+position = Vector2(576.5, 323.5)
+scale = Vector2(0.598438, 0.599074)
+texture = ExtResource("2_f7nxc")
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1080)
+
+[node name="Ground" type="ParallaxLayer" parent="."]
+z_index = -1
+motion_scale = Vector2(5, 5)
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+z_index = -2
+position = Vector2(576, 597)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_yy28a")
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 170)

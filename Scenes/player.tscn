@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://7wum3ydu15ki"]
+
+[ext_resource type="Script" path="res://Scripts/Game/player.gd" id="1_r4ktp"]
+[ext_resource type="Texture2D" uid="uid://c0kqt0koyqa4w" path="res://Art/Sprites/Dragon/dragon1.png" id="2_h688b"]
+[ext_resource type="Texture2D" uid="uid://d3rw4wg3vdqjv" path="res://Art/Sprites/Dragon/dragon2.png" id="3_7s47i"]
+[ext_resource type="Texture2D" uid="uid://dqymyytqf7bj1" path="res://Art/Sprites/Dragon/dragon3.png" id="4_2y14v"]
+[ext_resource type="Texture2D" uid="uid://demdfmankwrtb" path="res://Art/Sprites/Dragon/dragon4.png" id="5_atd6r"]
+[ext_resource type="AudioStream" uid="uid://br4y5e8jmctyq" path="res://Audio/Sound Effects/flap.wav" id="6_nrw08"]
+[ext_resource type="PackedScene" uid="uid://cahwa0x5ergp4" path="res://Scenes/blood_splatter_component.tscn" id="7_13ehn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lwwbo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h688b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7s47i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2y14v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_atd6r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vses0"]
+radius = 16.1245
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 3
+script = ExtResource("1_r4ktp")
+boost = -200.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(9.53674e-07, 2.38419e-07)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_lwwbo")
+frame_progress = 0.558109
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(26, 2)
+shape = SubResource("CircleShape2D_vses0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_nrw08")
+volume_db = -15.0
+
+[node name="BloodSplatterComponent" parent="." instance=ExtResource("7_13ehn")]
+BloodParticleNumber = 128
+RandomVelocity = 1000.0

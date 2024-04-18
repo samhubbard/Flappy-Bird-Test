@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0xibltk3equo"]
+
+[ext_resource type="Script" path="res://Scripts/Game/blockers.gd" id="1_jt7af"]
+[ext_resource type="Texture2D" uid="uid://cmpto2erk1jju" path="res://Art/Sprites/Wall/TopBlocker.png" id="2_31ha8"]
+[ext_resource type="Texture2D" uid="uid://cb0ngvladjr0s" path="res://Art/Sprites/Wall/BottomBlocker.png" id="3_gefce"]
+[ext_resource type="AudioStream" uid="uid://dopqoqg4jllp5" path="res://Audio/Sound Effects/Points.wav" id="4_wmjoc"]
+[ext_resource type="AudioStream" uid="uid://yoj7566e3i0g" path="res://Audio/Sound Effects/death.wav" id="5_qn43r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmfji"]
+size = Vector2(166, 646.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ch8dv"]
+size = Vector2(20, 212)
+
+[node name="Blockers" type="Node2D"]
+script = ExtResource("1_jt7af")
+
+[node name="TopBlocker" type="Area2D" parent="."]
+position = Vector2(0, -100)
+
+[node name="TopSprite" type="Sprite2D" parent="TopBlocker"]
+position = Vector2(1.5, -323)
+scale = Vector2(1.04375, 1.07333)
+texture = ExtResource("2_31ha8")
+
+[node name="TopCollider" type="CollisionShape2D" parent="TopBlocker"]
+position = Vector2(1.00001, -323.875)
+shape = SubResource("RectangleShape2D_rmfji")
+
+[node name="BottomBlocker" type="Area2D" parent="."]
+position = Vector2(0, 100)
+
+[node name="BottomSprite" type="Sprite2D" parent="BottomBlocker"]
+position = Vector2(2.5, 322.5)
+scale = Vector2(1.03125, 1.07833)
+texture = ExtResource("3_gefce")
+
+[node name="BottomCollider" type="CollisionShape2D" parent="BottomBlocker"]
+position = Vector2(2, 322.063)
+shape = SubResource("RectangleShape2D_rmfji")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(83, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(10, -1)
+shape = SubResource("RectangleShape2D_ch8dv")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
+[node name="PointsGrantedAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wmjoc")
+
+[node name="DeathAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_qn43r")
+volume_db = 15.0
+
+[connection signal="body_entered" from="TopBlocker" to="." method="_on_top_blocker_body_entered"]
+[connection signal="body_entered" from="BottomBlocker" to="." method="_on_bottom_blocker_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

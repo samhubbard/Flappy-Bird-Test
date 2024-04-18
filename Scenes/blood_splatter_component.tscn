@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cahwa0x5ergp4"]
+
+[ext_resource type="Script" path="res://Scripts/Game/BloodSplatterComponent.gd" id="1_1np6d"]
+[ext_resource type="PackedScene" uid="uid://q0tggxcm76de" path="res://Scenes/blood_particle.tscn" id="2_bicdx"]
+
+[node name="BloodSplatterComponent" type="Node2D"]
+script = ExtResource("1_1np6d")
+BloodParticleScene = ExtResource("2_bicdx")

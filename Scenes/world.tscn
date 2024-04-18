@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbi1pxdwip2e8"]
+
+[ext_resource type="PackedScene" uid="uid://7wum3ydu15ki" path="res://Scenes/player.tscn" id="1_fj5dt"]
+[ext_resource type="Script" path="res://Scripts/Game/Spawner.gd" id="2_xv00x"]
+[ext_resource type="PackedScene" uid="uid://d0xibltk3equo" path="res://Scenes/blockers.tscn" id="3_7435x"]
+[ext_resource type="Script" path="res://Scripts/Game/Score.gd" id="4_867ns"]
+[ext_resource type="PackedScene" uid="uid://cwvfis6b30ncr" path="res://Scenes/parallax_background.tscn" id="5_auxja"]
+[ext_resource type="AudioStream" uid="uid://d24lxw7hirck7" path="res://Audio/Music/BossMain.wav" id="6_8wv4u"]
+
+[sub_resource type="SystemFont" id="SystemFont_uievb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eikoo"]
+font = SubResource("SystemFont_uievb")
+font_size = 50
+font_color = Color(0.921569, 0.956863, 0.945098, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_fj5dt")]
+z_index = 1
+position = Vector2(200, 125)
+
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2(1451, 326)
+script = ExtResource("2_xv00x")
+blocker_scene = ExtResource("3_7435x")
+
+[node name="Timer" type="Timer" parent="Spawner"]
+one_shot = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 650.0
+
+[node name="Score" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 886.0
+offset_top = 15.0
+offset_right = 1136.0
+offset_bottom = 84.0
+label_settings = SubResource("LabelSettings_eikoo")
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("4_867ns")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("5_auxja")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_8wv4u")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
