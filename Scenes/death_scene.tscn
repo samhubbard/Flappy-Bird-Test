@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch6rilfcbrl6k"]
+[gd_scene load_steps=8 format=3 uid="uid://ch6rilfcbrl6k"]
 
 [ext_resource type="Script" path="res://Scripts/Game/death_scene.gd" id="1_0xct5"]
 
@@ -12,6 +12,26 @@ shadow_size = 5
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(3, 3)
 
+[sub_resource type="SystemFont" id="SystemFont_g5kiy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4di6e"]
+font = SubResource("SystemFont_g5kiy")
+font_size = 56
+font_color = Color(0.890196, 0.235294, 0.360784, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="SystemFont" id="SystemFont_ovm74"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j47pr"]
+font = SubResource("SystemFont_ovm74")
+font_size = 24
+font_color = Color(0.890196, 0.235294, 0.360784, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
 [node name="Death Scene" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -21,29 +41,71 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0xct5")
 
-[node name="Label" type="Label" parent="."]
+[node name="TitleOfScreen" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.574
-offset_right = -2.0
-offset_bottom = -0.100006
+anchor_right = 0.998
+anchor_bottom = 0.265
+offset_right = 0.303955
+offset_bottom = 0.279984
 text = "You Died..."
 label_settings = SubResource("LabelSettings_ngxs3")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.256
+anchor_right = 1.0
+anchor_bottom = 0.46
+offset_top = 0.112
+offset_right = -4.0
+offset_bottom = -0.0799866
+text = "Your score"
+label_settings = SubResource("LabelSettings_4di6e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnterNameLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.313
+anchor_top = 0.471
+anchor_right = 0.659
+anchor_bottom = 0.556
+offset_left = 0.423981
+offset_top = -0.208008
+offset_right = -0.16803
+offset_bottom = -0.288025
+text = "Enter your name"
+label_settings = SubResource("LabelSettings_j47pr")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="PlayerName" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.312
+anchor_top = 0.574
+anchor_right = 0.665
+anchor_bottom = 0.668
+offset_left = 0.575989
+offset_top = 0.0480042
+offset_right = -0.0800171
+offset_bottom = 0.135986
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.391
-anchor_top = 0.608
-anchor_right = 0.576
-anchor_bottom = 0.739
-offset_left = 0.567963
-offset_top = 0.0159607
-offset_right = 0.447937
-offset_bottom = 0.127991
+anchor_left = 0.403
+anchor_top = 0.694
+anchor_right = 0.566
+anchor_bottom = 0.826
+offset_left = -0.256042
+offset_top = 0.287994
+offset_right = -0.0320435
+offset_bottom = -0.248047
 text = "Damn"
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

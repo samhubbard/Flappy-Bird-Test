@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7uimkmn4sf04"]
+
+[ext_resource type="Texture2D" uid="uid://ky7harab586c" path="res://Art/Sprites/Background/BackgroundLayer1.png" id="1_bww4y"]
+[ext_resource type="Script" path="res://scripts/Game/leaderboard.gd" id="1_vybp4"]
+[ext_resource type="Texture2D" uid="uid://bwwmp540dmwb5" path="res://Art/Sprites/Background/BackgroundLayer2.png" id="2_dn6tq"]
+
+[sub_resource type="SystemFont" id="SystemFont_jdr44"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j8d3k"]
+font = SubResource("SystemFont_jdr44")
+font_size = 96
+font_color = Color(0.890196, 0.235294, 0.360784, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[node name="Leaderboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vybp4")
+
+[node name="BackgroundLayer1" type="Sprite2D" parent="."]
+position = Vector2(576, 324.5)
+scale = Vector2(0.598958, 0.599074)
+texture = ExtResource("1_bww4y")
+
+[node name="BackgroundLayer2" type="Sprite2D" parent="."]
+position = Vector2(576, 598)
+scale = Vector2(0.601042, 0.623529)
+texture = ExtResource("2_dn6tq")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.158
+offset_right = -1.0
+offset_bottom = 0.359985
+text = "Leaderboard"
+label_settings = SubResource("LabelSettings_j8d3k")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 0.227
+anchor_right = 1.0
+anchor_bottom = 0.843
+offset_left = 327.848
+offset_top = -19.096
+offset_right = -323.0
+offset_bottom = -19.264
+
+[node name="ScrollItemContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="MainMenuButton" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.457
+anchor_top = 0.869
+anchor_right = 0.577
+anchor_bottom = 0.977
+offset_left = -0.440063
+offset_top = -0.52002
+offset_right = 0.159912
+offset_bottom = -0.160034
+text = "Main Menu"
+
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]

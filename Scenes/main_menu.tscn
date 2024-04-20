@@ -24,24 +24,24 @@ shadow_offset = Vector2(3, 3)
 [node name="MainMenu" type="Node2D"]
 
 [node name="BackgroundLayer1" type="Sprite2D" parent="."]
-position = Vector2(577, 325)
-scale = Vector2(0.598958, 0.601852)
+position = Vector2(576, 324)
+scale = Vector2(0.597916, 0.6)
 texture = ExtResource("1_kpak3")
 
 [node name="BackgroundLayer2" type="Sprite2D" parent="."]
-position = Vector2(578, 601)
-scale = Vector2(0.6, 0.6)
+position = Vector2(577.5, 598.25)
+scale = Vector2(0.597396, 0.567646)
 texture = ExtResource("2_kitfi")
 
 [node name="Dragon" type="Sprite2D" parent="."]
-position = Vector2(200, 125)
+position = Vector2(148, 126)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_7jcl4")
 
 [node name="MainMenuUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1150.0
+offset_right = 1147.0
 offset_bottom = 650.0
 script = ExtResource("3_ku07e")
 

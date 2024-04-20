@@ -21,16 +21,16 @@ shadow_size = 3
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(4, 4)
 
-[node name="Node2D" type="Node2D"]
+[node name="World" type="Node2D"]
 script = ExtResource("1_p51sq")
 death_scene = ExtResource("2_vfyhl")
 
 [node name="Player" parent="." instance=ExtResource("1_fj5dt")]
 z_index = 1
-position = Vector2(200, 125)
+position = Vector2(148, 126)
 
 [node name="Spawner" type="Node2D" parent="."]
-position = Vector2(1451, 326)
+position = Vector2(1353, 324)
 script = ExtResource("2_xv00x")
 blocker_scene = ExtResource("3_7435x")
 
@@ -40,15 +40,15 @@ one_shot = true
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1153.0
-offset_bottom = 650.0
+offset_right = 1919.0
+offset_bottom = 1082.0
 
 [node name="Score" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 886.0
-offset_top = 15.0
-offset_right = 1136.0
-offset_bottom = 84.0
+offset_left = 879.0
+offset_top = 23.0
+offset_right = 1129.0
+offset_bottom = 92.0
 label_settings = SubResource("LabelSettings_eikoo")
 horizontal_alignment = 2
 vertical_alignment = 1

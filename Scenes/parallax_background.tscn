@@ -10,12 +10,12 @@ script = ExtResource("1_7eubi")
 [node name="Scenery" type="ParallaxLayer" parent="."]
 z_index = -2
 motion_scale = Vector2(2.5, 2.5)
-motion_mirroring = Vector2(1149, 0)
+motion_mirroring = Vector2(1140, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Scenery"]
 z_index = -3
-position = Vector2(576.5, 323.5)
-scale = Vector2(0.598438, 0.599074)
+position = Vector2(576, 326)
+scale = Vector2(0.597917, 0.603704)
 texture = ExtResource("2_f7nxc")
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)
@@ -23,12 +23,12 @@ region_rect = Rect2(0, 0, 1920, 1080)
 [node name="Ground" type="ParallaxLayer" parent="."]
 z_index = -1
 motion_scale = Vector2(5, 5)
-motion_mirroring = Vector2(1150, 0)
+motion_mirroring = Vector2(1140, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
 z_index = -2
-position = Vector2(576, 597)
-scale = Vector2(0.6, 0.6)
+position = Vector2(578, 600.938)
+scale = Vector2(0.598958, 0.599265)
 texture = ExtResource("3_yy28a")
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 170)
