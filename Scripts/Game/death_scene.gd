@@ -22,6 +22,6 @@ func _on_button_button_up() -> void:
 		get_tree().change_scene_to_packed(leaderboardScene)
 		queue_free()
 
-func save_score_complete(item):
+func save_score_complete(_item):
 	get_tree().change_scene_to_packed(leaderboardScene)
 	queue_free()

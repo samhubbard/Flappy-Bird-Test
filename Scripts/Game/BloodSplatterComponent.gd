@@ -32,5 +32,5 @@ func splatter(particles_to_spawn = -1) -> void:
 		spawnedParticle.linear_velocity = Vector2(random.randf_range(-RandomVelocity, RandomVelocity), random.randf_range(-RandomVelocity, RandomVelocity))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta) -> void:
+func _process(_delta) -> void:
 	pass

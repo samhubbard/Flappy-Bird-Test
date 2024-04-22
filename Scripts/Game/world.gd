@@ -14,5 +14,5 @@ func on_death() -> void:
 	Data.load()
 
 func showDeathScene():
-	var death = death_scene.instantiate()
-	get_parent().add_child(death)
+	var death_ui = death_scene.instantiate()
+	get_parent().add_child(death_ui)
