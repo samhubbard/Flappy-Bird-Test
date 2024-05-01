@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7uimkmn4sf04"]
 
-[ext_resource type="Texture2D" uid="uid://ky7harab586c" path="res://Art/Sprites/Background/BackgroundLayer1.png" id="1_bww4y"]
-[ext_resource type="Script" path="res://scripts/Game/leaderboard.gd" id="1_vybp4"]
-[ext_resource type="Texture2D" uid="uid://bwwmp540dmwb5" path="res://Art/Sprites/Background/BackgroundLayer2.png" id="2_dn6tq"]
+[ext_resource type="Script" path="res://scripts/game/leaderboard.gd" id="1_vybp4"]
+[ext_resource type="Texture2D" uid="uid://ky7harab586c" path="res://art/sprites/background/backgroundlayer1.png" id="2_f83pj"]
+[ext_resource type="Texture2D" uid="uid://bwwmp540dmwb5" path="res://art/sprites/background/backgroundlayer2.png" id="3_js8ss"]
 
 [sub_resource type="SystemFont" id="SystemFont_jdr44"]
 
@@ -26,12 +26,12 @@ script = ExtResource("1_vybp4")
 [node name="BackgroundLayer1" type="Sprite2D" parent="."]
 position = Vector2(576, 324.5)
 scale = Vector2(0.598958, 0.599074)
-texture = ExtResource("1_bww4y")
+texture = ExtResource("2_f83pj")
 
 [node name="BackgroundLayer2" type="Sprite2D" parent="."]
 position = Vector2(576, 598)
 scale = Vector2(0.601042, 0.623529)
-texture = ExtResource("2_dn6tq")
+texture = ExtResource("3_js8ss")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

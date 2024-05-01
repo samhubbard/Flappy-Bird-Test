@@ -1,9 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://q0tggxcm76de"]
 
-[ext_resource type="Script" path="res://Scripts/Game/blood_particle.gd" id="1_xanh5"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7g1ux"]
-size = Vector2(5, 5)
+[ext_resource type="Script" path="res://scripts/game/blood_particle.gd" id="1_7el0c"]
 
 [sub_resource type="Gradient" id="Gradient_bnv7e"]
 colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
@@ -11,6 +8,9 @@ colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_s0cv8"]
 gradient = SubResource("Gradient_bnv7e")
 width = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7g1ux"]
+size = Vector2(5, 5)
 
 [sub_resource type="Animation" id="Animation_as4v7"]
 resource_name = "Lifetime"
@@ -49,17 +49,14 @@ _data = {
 }
 
 [node name="BloodParticle" type="RigidBody2D"]
+script = ExtResource("1_7el0c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(5, 5)
-gravity_scale = 0.0
-script = ExtResource("1_xanh5")
+texture = SubResource("GradientTexture1D_s0cv8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7g1ux")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.820631)
-scale = Vector2(5, 5)
-texture = SubResource("GradientTexture1D_s0cv8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

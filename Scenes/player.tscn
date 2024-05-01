@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://7wum3ydu15ki"]
 
-[ext_resource type="Script" path="res://Scripts/Game/player.gd" id="1_r4ktp"]
-[ext_resource type="Texture2D" uid="uid://c0kqt0koyqa4w" path="res://Art/Sprites/Dragon/dragon1.png" id="2_h688b"]
-[ext_resource type="Texture2D" uid="uid://d3rw4wg3vdqjv" path="res://Art/Sprites/Dragon/dragon2.png" id="3_7s47i"]
-[ext_resource type="Texture2D" uid="uid://dqymyytqf7bj1" path="res://Art/Sprites/Dragon/dragon3.png" id="4_2y14v"]
-[ext_resource type="Texture2D" uid="uid://demdfmankwrtb" path="res://Art/Sprites/Dragon/dragon4.png" id="5_atd6r"]
-[ext_resource type="AudioStream" uid="uid://br4y5e8jmctyq" path="res://Audio/Sound Effects/flap.wav" id="6_nrw08"]
-[ext_resource type="PackedScene" uid="uid://cahwa0x5ergp4" path="res://Scenes/blood_splatter_component.tscn" id="7_13ehn"]
+[ext_resource type="Script" path="res://scripts/game/player.gd" id="1_pl656"]
+[ext_resource type="Texture2D" uid="uid://c0kqt0koyqa4w" path="res://art/sprites/dragon/dragon1.png" id="2_h688b"]
+[ext_resource type="Texture2D" uid="uid://d3rw4wg3vdqjv" path="res://art/sprites/dragon/dragon2.png" id="3_7s47i"]
+[ext_resource type="Texture2D" uid="uid://dqymyytqf7bj1" path="res://art/sprites/dragon/dragon3.png" id="4_2y14v"]
+[ext_resource type="Texture2D" uid="uid://demdfmankwrtb" path="res://art/sprites/dragon/dragon4.png" id="5_atd6r"]
+[ext_resource type="AudioStream" uid="uid://br4y5e8jmctyq" path="res://audio/soundeffects/flap.wav" id="6_nrw08"]
+[ext_resource type="PackedScene" uid="uid://cahwa0x5ergp4" path="res://scenes/blood_splatter_component.tscn" id="7_13ehn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lwwbo"]
 animations = [{
@@ -33,7 +33,7 @@ radius = 16.1245
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
-script = ExtResource("1_r4ktp")
+script = ExtResource("1_pl656")
 gravity = 980.0
 max_velocity = 1000.0
 

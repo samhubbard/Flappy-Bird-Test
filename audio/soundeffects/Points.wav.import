@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dopqoqg4jllp5"
-path="res://.godot/imported/Points.wav-acd6770850d9cd01e2514c742e4411cc.sample"
+path="res://.godot/imported/Points.wav-6d46bfe11c9634d0bf0b2914f2b122a8.sample"
 
 [deps]
 
-source_file="res://Audio/Sound Effects/Points.wav"
-dest_files=["res://.godot/imported/Points.wav-acd6770850d9cd01e2514c742e4411cc.sample"]
+source_file="res://audio/soundeffects/Points.wav"
+dest_files=["res://.godot/imported/Points.wav-6d46bfe11c9634d0bf0b2914f2b122a8.sample"]
 
 [params]
 

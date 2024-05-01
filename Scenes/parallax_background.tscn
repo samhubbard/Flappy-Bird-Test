@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwvfis6b30ncr"]
 
-[ext_resource type="Script" path="res://Scripts/Game/parallax_background.gd" id="1_7eubi"]
-[ext_resource type="Texture2D" uid="uid://ky7harab586c" path="res://Art/Sprites/Background/BackgroundLayer1.png" id="2_f7nxc"]
-[ext_resource type="Texture2D" uid="uid://bwwmp540dmwb5" path="res://Art/Sprites/Background/BackgroundLayer2.png" id="3_yy28a"]
+[ext_resource type="Script" path="res://scripts/game/parallax_background.gd" id="1_4njvh"]
+[ext_resource type="Texture2D" uid="uid://ky7harab586c" path="res://art/sprites/background/backgroundlayer1.png" id="2_f7nxc"]
+[ext_resource type="Texture2D" uid="uid://bwwmp540dmwb5" path="res://art/sprites/background/backgroundlayer2.png" id="3_yy28a"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
-script = ExtResource("1_7eubi")
+script = ExtResource("1_4njvh")
 
 [node name="Scenery" type="ParallaxLayer" parent="."]
 z_index = -2

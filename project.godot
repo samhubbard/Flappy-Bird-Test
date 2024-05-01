@@ -11,22 +11,25 @@ config_version=5
 [application]
 
 config/name="Flappy Dragon"
-run/main_scene="res://Scenes/main_menu.tscn"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-boot_splash/show_image=false
-config/icon="res://Art/Sprites/Dragon/dragon1.png"
+config/icon="res://art/sprites/dragon/dragon1.png"
 
 [autoload]
 
-SignalManager="*res://Scripts/Game/Singletons/signal_manager.gd"
-Data="*res://Scripts/Game/Singletons/data.gd"
-Global="*res://Scripts/Game/Singletons/global.gd"
+SignalManager="*res://scripts/game/singletons/signal_manager.gd"
+Data="*res://scripts/game/singletons/data.gd"
+Global="*res://scripts/game/singletons/global.gd"
 SilentWolf="*res://addons/silent_wolf/SilentWolf.gd"
 
 [display]
 
-window/stretch/mode="canvas_items"
-window/stretch/aspect="ignore"
+window/size/mode=3
+window/size/initial_position_type=0
+window/size/resizable=false
+window/size/borderless=true
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [dotnet]
 
@@ -44,4 +47,4 @@ animation_library={
 
 [rendering]
 
-viewport/hdr_2d=true
+textures/canvas_textures/default_texture_filter=0

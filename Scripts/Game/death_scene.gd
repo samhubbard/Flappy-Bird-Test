@@ -3,7 +3,7 @@ extends Control
 @onready var highscore : Label = $Score
 @onready var playerName : LineEdit = $PlayerName
 
-const leaderboardScene : PackedScene = preload("res://Scenes/leaderboard.tscn")
+const leaderboardScene : PackedScene = preload("res://scenes/leaderboard.tscn")
 
 var score
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d24lxw7hirck7"
-path="res://.godot/imported/BossMain.wav-3ac7f91daa0da0a6c50f918a36e02cba.sample"
+path="res://.godot/imported/BossMain.wav-253246d41294360fe65706cfb130d8ae.sample"
 
 [deps]
 
-source_file="res://Audio/Music/BossMain.wav"
-dest_files=["res://.godot/imported/BossMain.wav-3ac7f91daa0da0a6c50f918a36e02cba.sample"]
+source_file="res://audio/music/BossMain.wav"
+dest_files=["res://.godot/imported/BossMain.wav-253246d41294360fe65706cfb130d8ae.sample"]
 
 [params]
 

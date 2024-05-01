@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwwmp540dmwb5"
-path="res://.godot/imported/backgroundlayer2.png-ad4007d4a63f926715fc6140b43076d5.ctex"
+uid="uid://cdjb2u0xisaoj"
+path="res://.godot/imported/FloatingWindow.png-3a75edc30ffea075fac79bb37b21b6d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/sprites/background/backgroundlayer2.png"
-dest_files=["res://.godot/imported/backgroundlayer2.png-ad4007d4a63f926715fc6140b43076d5.ctex"]
+source_file="res://hubimages/FloatingWindow.png"
+dest_files=["res://.godot/imported/FloatingWindow.png-3a75edc30ffea075fac79bb37b21b6d1.ctex"]
 
 [params]
 

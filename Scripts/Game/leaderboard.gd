@@ -1,7 +1,7 @@
 extends Control
 
-const ScoreItem : PackedScene = preload("res://Scenes/ScoreItem.tscn")
-const MainMenu : PackedScene = preload("res://Scenes/main_menu.tscn")
+const ScoreItem : PackedScene = preload("res://scenes/scoreitem.tscn")
+const MainMenu : PackedScene = preload("res://scenes/main_menu.tscn")
 
 var list_index = 0
 var max_scores = 10

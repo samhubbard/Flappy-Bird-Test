@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://br4y5e8jmctyq"
-path="res://.godot/imported/flap.wav-3f50980edf2d0cb1aecaed35e7ac1744.sample"
+uid="uid://yoj7566e3i0g"
+path="res://.godot/imported/death.wav-ea6bea42b028a6d751b72329649472a6.sample"
 
 [deps]
 
-source_file="res://Audio/Sound Effects/flap.wav"
-dest_files=["res://.godot/imported/flap.wav-3f50980edf2d0cb1aecaed35e7ac1744.sample"]
+source_file="res://audio/soundeffects/death.wav"
+dest_files=["res://.godot/imported/death.wav-ea6bea42b028a6d751b72329649472a6.sample"]
 
 [params]
 

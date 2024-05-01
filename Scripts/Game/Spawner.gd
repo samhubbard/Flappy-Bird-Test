@@ -20,7 +20,7 @@ func _on_timer_timeout() -> void:
 	if dead == true:
 		return
 	_spawn()
-	$Timer.wait_time = rng.randf_range(0.85, 1.65)
+	$Timer.wait_time = rng.randf_range(1.0, 1.45)
 	$Timer.start()
 
 func _spawn() -> void:
